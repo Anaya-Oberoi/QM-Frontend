@@ -1,0 +1,42 @@
+# ── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build output ──────────────────────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+# .env          → COMMITTED  (safe defaults + full docs, no secrets)
+# .env.local    → IGNORED    (personal overrides, may contain secrets)
+# .env.*.local  → IGNORED    (per-environment personal overrides)
+#
+# NEVER commit API keys, OAuth client secrets, or database passwords.
+# Use .env.local for any value you don't want in git history.
+# See src/config/env.js for the centralised env access layer.
+.env.local
+.env.*.local
+
+# ── Editor/OS artifacts ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Coverage / test artifacts ─────────────────────────────────────────────────
+coverage/
+.nyc_output/
