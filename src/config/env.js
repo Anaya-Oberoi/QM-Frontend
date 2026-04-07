@@ -25,22 +25,22 @@
 /**
  * Base URL of the Spring Boot backend (no trailing slash).
  *
- * Set VITE_API_URL in your environment:
+ * Set VITE_API_BASE_URL in your environment:
  *   Local dev   → .env already defaults to http://localhost:8080
  *   Docker      → http://backend:8080  (docker-compose service name)
  *   Production  → https://api.yourdomain.com  (CI/CD secret / OS env var)
  *
  * In CI/CD (GitHub Actions example):
  *   env:
- *     VITE_API_URL: ${{ secrets.PROD_API_URL }}
+ *     VITE_API_BASE_URL: ${{ secrets.PROD_API_BASE_URL }}
  *   run: npm run build
  */
 
-const url = import.meta.env.VITE_API_URL;
+const url = import.meta.env.VITE_API_BASE_URL;
 
 if (!url) {
   throw new Error(
-    "[env] VITE_API_URL is not set. Check your .env or CI environment.",
+    "[env] VITE_API_BASE_URL is not set. Check your .env or CI environment.",
   );
 }
 
